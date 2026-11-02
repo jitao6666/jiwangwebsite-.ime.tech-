@@ -1,0 +1,41 @@
+:root { color-scheme: light; --paper: #eee9dc; --ink: #273a35; --muted: #68776e; --red: #a44435; --line: #334b3f30; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 2px solid var(--red); outline-offset: 5px; }
+.page { max-width: 1600px; margin: auto; padding: 0 clamp(24px, 6vw, 96px); }
+.header { height: 96px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.brand { display: flex; align-items: center; gap: 14px; }
+.seal { display: grid; place-content: center; width: 38px; height: 38px; background: var(--red); color: #f9f3e5; font-family: "Songti SC", "SimSun", serif; font-size: 14px; line-height: 1; text-align: center; }
+.brand-text { font-family: "Songti SC", "SimSun", serif; font-size: 18px; letter-spacing: .22em; }
+.brand-text small { display: block; margin-top: 5px; color: var(--muted); font: 9px system-ui, sans-serif; letter-spacing: .2em; }
+.header-link { color: var(--muted); font-size: 13px; letter-spacing: .08em; }
+.header-link span { margin-left: 9px; color: var(--red); }
+.hero { min-height: 670px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 6%; padding: 70px 0 90px; }
+.eyebrow, .section-label { color: var(--red); letter-spacing: .22em; font-size: 11px; }
+.eyebrow { display: flex; align-items: center; gap: 12px; }
+.eyebrow span { width: 28px; height: 1px; background: var(--red); }
+h1, h2, p { margin-top: 0; }
+h1 { margin: 30px 0 24px; font-family: "Songti SC", "SimSun", serif; font-size: clamp(48px, 5.6vw, 84px); line-height: 1.45; font-weight: 400; letter-spacing: .08em; }
+h1 em { color: #527369; font-style: normal; }
+.title-stop { color: var(--red); }
+.intro { color: var(--muted); font-family: "Songti SC", "SimSun", serif; font-size: 16px; line-height: 2.2; letter-spacing: .08em; }
+.button { margin-top: 26px; display: inline-flex; align-items: center; gap: 42px; padding: 14px 20px; border: 1px solid #527369; color: #34564b; font-size: 13px; letter-spacing: .08em; transition: background .2s, color .2s; }
+.button:hover { background: #34564b; color: #f5f1e6; }
+.art { position: relative; overflow: hidden; min-height: 490px; background: linear-gradient(170deg, #d7ded2, #e8e6d6 52%, #c6d0c5); }
+.art-frame { position: absolute; z-index: 2; inset: 16px; border: 1px solid #fff9; pointer-events: none; }
+.sun { position: absolute; top: 18%; right: 23%; width: 21%; aspect-ratio: 1; border-radius: 50%; background: #ba6551; opacity: .8; }
+.landscape { position: absolute; inset: 0; width: 100%; height: 100%; }
+.art-verse { position: absolute; z-index: 2; top: 38px; left: 38px; writing-mode: vertical-rl; color: #34564b; font-family: "Songti SC", "SimSun", serif; font-size: 13px; line-height: 2; letter-spacing: .25em; }
+.art-seal { position: absolute; z-index: 2; bottom: 35px; right: 36px; padding: 5px; border: 1px solid #f1e9d2; color: #f1e9d2; font-family: serif; font-size: 13px; }
+.about { display: grid; grid-template-columns: 1fr 1fr; gap: 6%; border-top: 1px solid var(--line); padding: 80px 0 95px; }
+h2 { margin: 25px 0 0; font-family: "Songti SC", "SimSun", serif; font-size: clamp(30px, 3vw, 44px); line-height: 1.6; font-weight: 400; letter-spacing: .06em; }
+.about-copy { max-width: 500px; padding-top: 32px; color: var(--muted); font-size: 15px; line-height: 2.1; }
+.signature { display: block; margin-top: 38px; color: #527369; font-family: "Songti SC", "SimSun", serif; font-size: 13px; letter-spacing: .12em; }
+.signature span { color: var(--red); margin-right: 8px; }
+footer { border-top: 1px solid var(--line); min-height: 95px; display: flex; align-items: center; justify-content: space-between; gap: 20px; color: var(--muted); font-size: 11px; letter-spacing: .08em; }
+footer i { color: var(--red); font-style: normal; }
+footer a:hover, .header-link:hover { color: var(--red); }
+@media (max-width: 700px) { .header { height: 75px; } .hero { grid-template-columns: 1fr; gap: 48px; padding: 76px 0 70px; } h1 { font-size: clamp(42px, 11vw, 65px); } .art { min-height: 340px; } .about { grid-template-columns: 1fr; padding: 60px 0; } .about-copy { padding-top: 25px; } footer { flex-wrap: wrap; padding: 25px 0; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
